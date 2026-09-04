@@ -58,7 +58,7 @@ Checks delivery IDs, customer information, delivery status, delivery duration, p
 <img width="1348" height="436" alt="Screenshot 2026-09-04 144300" src="https://github.com/user-attachments/assets/c0c27b73-290b-4555-a3b2-1ca23b1fa2e0" />
 
 
-## 📊 Sample Output
+## Sample Output
 The system generates a structured report showing the delivery information, performance, priority, recommended action, and validation status.
 
 <img width="873" height="798" alt="Screenshot 2026-09-04 142423" src="https://github.com/user-attachments/assets/bf86da74-344a-43d6-a6f5-65bebfdf0985" />
@@ -66,6 +66,23 @@ The system generates a structured report showing the delivery information, perfo
 <img width="872" height="660" alt="Screenshot 2026-09-04 144512" src="https://github.com/user-attachments/assets/0d8a6935-26bf-4864-99af-a34a612b3fd7" />
 <img width="881" height="666" alt="Screenshot 2026-09-04 144527" src="https://github.com/user-attachments/assets/acffb186-8595-40ab-8208-814da030a096" />
 
+## Business Logic
+
+The system uses delivery information to make decisions:
+
+- Days Since Order ≤ Expected Delivery Days → **On Time**
+- Days Since Order > Expected Delivery Days → **Delayed**
+- Delayed + 2 or more attempts → **Urgent**
+- Delayed + at least 1 attempt → **High**
+- On Time + at least 1 attempt → **Normal**
+- On Time + 0 attempts → **Low**
+
+## How to Run
+
+1. Clone this repository.
+2. Open `Delivery_Status_Management_System.ipynb` in Jupyter Notebook or Google Colab.
+3. Run the cells sequentially.
+4. Follow the prompts where user input is required.
 
 ## 🎯 Key Learning
 
